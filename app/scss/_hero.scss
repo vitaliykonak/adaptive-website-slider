@@ -1,0 +1,158 @@
+@mixin socialbutton {
+	height: 48px;
+	width: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $pink;
+	border-radius: 50%;
+}
+
+.hero {
+	margin-top: 60px;
+	background-color: $green;
+	padding-top: 100px;
+	width: 100%;
+}
+@media (max-width: 768px) {
+	.hero {
+		padding-top: 20px;
+	}
+}
+.hero__container {
+	width: 100%;
+	display: flex;
+}
+
+.hero__seacrch {
+}
+.hero__seacrch__title {
+	h2 {
+		font-family: $caveat;
+		font-size: 50px;
+		line-height: 63px;
+		color: $orange;
+	}
+	h3 {
+		max-width: 531px;
+		font-size: 72px;
+		line-height: 80px;
+		color: $white;
+	}
+}
+@media (max-width: 1024px) {
+	.hero__seacrch__title {
+		h2 {
+			text-align: center;
+		}
+	}
+}
+.hero__seacrch__input {
+	margin-top: 50px;
+	position: relative;
+	z-index: 3;
+	max-width: 470px;
+	input {
+		padding: 16px;
+		height: 48px;
+		border: 2px solid #ffffff;
+		border-radius: 12px;
+		width: 100%;
+	}
+	button {
+		width: 116px;
+		height: 45px;
+		position: absolute;
+		top: 1px;
+		right: 1px;
+		background-color: $pink;
+		border-radius: 12px;
+		cursor: pointer;
+	}
+}
+.hero__foodimg {
+	position: relative;
+
+	flex-basis: 50%;
+}
+@media (max-width: 768px) {
+	.hero__foodimg {
+		display: none;
+		width: 100%;
+		position: relative;
+		flex-basis: 50%;
+	}
+
+	.hero__seacrch__title {
+		h3 {
+			line-height: 50px;
+			font-size: 48px;
+			max-width: 631px;
+		}
+	}
+}
+.hero__foodimg__1 {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	justify-content: end;
+}
+.hero__foodimg__2 {
+	position: relative;
+	z-index: 2;
+	margin-top: -180px;
+	display: flex;
+	justify-content: center;
+}
+
+.hero__foodimg__3 {
+	position: relative;
+	z-index: 1;
+	margin-top: -180px;
+	display: flex;
+	justify-content: start;
+}
+@media (max-width: 1024px) {
+	.hero__foodimg__2 {
+		img {
+			width: 350px;
+		}
+	}
+}
+@media (max-width: 928px) {
+	.hero__foodimg__2 {
+		img {
+			width: 250px;
+		}
+	}
+}
+.hero__seacrch__social {
+	margin-top: 150px;
+	max-width: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+@media (max-width: 1024px) {
+	.hero__seacrch__social {
+		margin: 0 auto;
+	}
+}
+.social__facebook {
+	@include socialbutton;
+}
+.social__twitter {
+	@include socialbutton;
+}
+.social__instagram {
+	@include socialbutton;
+}
+@media (max-width: 768px) {
+	.hero__seacrch__social {
+		margin-top: 30px;
+	}
+	input {
+		&::placeholder {
+			font-size: 12px;
+		}
+	}
+}
